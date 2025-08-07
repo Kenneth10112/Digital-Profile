@@ -1,0 +1,153 @@
+/* ========================== */
+/* == Global & Base Styles == */
+/* ========================== */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: auto; /* Prevent overall scrolling */
+}
+
+body {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: min-content 1fr;
+  padding-bottom: 1px;
+  gap: 1px;
+}
+
+/* ===================================== */
+/* == ASIDE (#sidebar) Styles         == */
+/* ===================================== */
+
+#sidebar {
+  grid-row: 1 / 3;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr;
+  border-right: 5px solid #454138;
+  overflow-y: auto;
+}
+
+#sidebar * {
+  padding: 0px;
+  margin: 0px;
+}
+
+#app-title {
+  text-shadow: 0.2rem 0.2rem 0 #706A5C;
+  color: #bab5a1;
+  font-size: large;
+  padding: 10px;
+}
+
+#navigation {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: min-content;
+  padding: 5px;
+  gap: 10px;
+}
+
+#os-components-fieldset {
+  padding: 10px;
+  border-width: 2px;
+}
+
+#account-info,
+#os-components-nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: min-content;
+  gap: 5px;
+}
+
+#username {
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+/* Buttons within #sidebar */
+.nav-button {
+  height: 30px;
+}
+
+
+/* ===================================== */
+/* == HEADER (#TOPBAR) Styles         == */
+/* ===================================== */
+
+#topbar {
+  display: grid;
+  grid-template-columns: 40px 1fr 100px;
+  grid-template-rows: 40px;
+  padding: 10px;
+  gap: 10px;
+  background-color: #454138b4;
+}
+
+#topbar * {
+  padding: 0px;
+  margin: 0px;
+}
+
+#search-filter-nav {
+  display: grid;
+  grid-template-columns: .8fr 1.7fr .5fr;
+  grid-auto-rows: 1fr;
+  gap: 10px;
+}
+
+#menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 5px;
+}
+
+
+/* ===================================== */
+/* == MAINCONTENT (#main-content) Styles == */
+/* ===================================== */
+
+#main-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+/* Use a generic class for all scrollable content containers within main */
+.scrollable-content {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    grid-template-rows: max;
+}
+.core-values-card blockquote,
+.key-memories-card blockquote,
+.ui-card blockquote {
+    margin: 0px 30px;
+}
+
+/* Improved structure for list items */
+#core-values-list {
+  padding: 0;
+  margin-left: 40px;
+  list-style: square; /* Removes default list bullets */
+}
+
+.core-value-item {
+  margin-bottom: 10px; /* Spacing between list items */
+}
+
+.core-value-title {
+    margin-top: 10px;
+}
+
+.core-value-item p {
+    margin-top: 5px;
+}
